@@ -1,9 +1,7 @@
 """
-Python 320 Wn 2023
 December 2022
-Class: sprouts
+Project: sprouts
 Author: Leonard Vaughn (@aqualen)
-Due/Submission Date: FIXME
 """
 
 import unittest
