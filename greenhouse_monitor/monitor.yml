@@ -1,0 +1,4 @@
+- monitor:
+    port: "/dev/cu.usbserial-A600exNO"
+    keys: "/Users/l/gcp/test-sprouts-5f2330e47aea.json"
+
