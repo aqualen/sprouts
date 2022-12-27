@@ -1,3 +1,7 @@
-pyserial
+pyserial~=3.5
 google.cloud.logging
-PyYAML
+PyYAML~=6.0
+grpcio
+google-cloud-monitoring
+pip==22.3.1
+setuptools==65.6.3

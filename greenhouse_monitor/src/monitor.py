@@ -49,5 +49,5 @@ if __name__ == '__main__':
                 logging.info(line)
 
     except serial.serialutil.SerialException:
-        print(f"Unable to open the serial port {port}.  Make sure your device is connected"
-              "and you have identified the proper port.")
+        print(f"Unable to open the serial port {port}.  Make sure your device is connected "
+              "and you have identified the proper port in the monitor.yml configuration file.")
