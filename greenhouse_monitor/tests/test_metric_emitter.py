@@ -15,18 +15,18 @@ from google.cloud import monitoring_v3
 
 class TestMetrics(unittest.TestCase):
     def test_something(self):
-        project_id = "sprouts"
+        # https://cloud.google.com/monitoring/custom-metrics/creating-metrics
+        project_id = "test-sprouts"
 
         keys = "/Users/l/gcp/test-sprouts-5f2330e47aea.json"
-        client = monitoring_v3.MetricServiceClient(
-            credentials={keys: "/Users/l/gcp/test-sprouts-5f2330e47aea.json"})
+        client = monitoring_v3.MetricServiceClient()
         project_name = f"projects/{project_id}"
 
         series = monitoring_v3.TimeSeries()
-        series.metric.type = "custom.googleapis.com/my_metric" + str(uuid.uuid4())
-        series.resource.type = "gce_instance"
-        series.resource.labels["instance_id"] = "1234567890123456789"
-        series.resource.labels["zone"] = "us-central1-f"
+        series.metric.type = "custom.googleapis.com/greenhouse" + str(uuid.uuid4())
+        series.resource.type = "global"
+        # series.resource.labels["instance_id"] = "001"
+        # series.resource.labels["zone"] = "us-central1-f"
         series.metric.labels["TestLabel"] = "My Label Data"
         now = time.time()
 
